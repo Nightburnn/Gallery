@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Gallery</title>
+	<style media="screen">
+		body{
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			flex-flow: row wrap;
+			background: linear-gradient(45deg, black, white);
+			}
+			.main{
+				height: 300px;
+				width: 300px;
+				position: relative;
+				overflow: hidden;
+				margin: 10px;
+				border-radius: 10px;
+			}
+			.main:hover{
+				box-shadow: -5px 5px 5px gray;
+			}
+			.main > img{
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				object-position: right;
+				transition: 1.5s;
+			}
+			.main:hover > img{
+				object-position: left;
+
+			}
+			.main .content{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 30%;
+				width: 100%;
+				background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7) 50%);
+				color: white;
+				font-family: arial;
+				padding: 5px;
+				box-sizing: border-box;
+				transform: scaleY(0);
+				transform-origin: bottom;
+				transition: .3s;
+			}
+			.main:hover .content{
+				transform: scaleY(1);
+			}
+			.content button{
+				height: 30px;
+				width: 60px;
+				background: none;
+				outline: none;
+				border-radius: 5px;
+				border: 2px solid white;
+				float: right;
+				margin-top: -60px;
+				color: white;
+				cursor: pointer;
+			}
+			.content button:hover{
+			background: red; 
+			}
+	</style>
+</head>
+<body>
+<div class="main">
+	<img src="https://facts.net/wp-content/uploads/2021/05/Bleach-anime.jpeg" alt="">
+	<div class="content">
+		<h4>Bleach</h4>
+		<p>ブリーチ</p>
+		<button type="button" name="button">More</button>
+	</div>
+</div>
+
+<div class="main">
+	<img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/07/Header-10-Anime-to-Watch-If-You-Love-One-Piece.jpg" alt="">
+	<div class="content">
+		<h4>One Piece</h4>
+		<p>ワンピース</p>
+		<button type="button" name="button">More</button>
+	</div>
+</div>
+
+<div class="main">
+	<img src="https://www.kotaku.com.au/wp-content/uploads/sites/3/2014/11/21/nlnz43yxmekrctqbdegk.jpg?q=65&w=1280" alt="">
+	<div class="content">
+		<h4>Naruto</h4>
+		<p>うずまき ナルト</p>
+		<button type="button" name="button">More</button>
+	</div>
+</div>
+
+<div class="main">
+	<img src="https://www.tvguide.com/a/img/hub/2022/03/24/44f908c5-d08d-4492-9668-9b86469126ce/recs-attackontitan2.jpg" alt="">
+	<div class="content">
+		<h4>Attack on Titan</h4>
+		<p>進撃の巨人</p>
+		<button type="button" name="button">More</button>
+	</div>
+</div>
+
+<div class="main">
+	<img src="https://cdn.oneesports.gg/cdn-data/2022/06/Anime_HunterxHunter_HunterExamArc.jpg" alt="">
+	<div class="content">
+		<h4>HunterxHunter</h4>
+		<p>ハンター×ハンター</p>
+		<button type="button" name="button">More</button>
+	</div>
+</div>
+
+<div class="main">
+	<img src="https://images2.alphacoders.com/104/1042104.jpg" alt="">
+	<div class="content">
+		<h4>Demon slayer</h4>
+		<p>鬼滅の刃</p>
+		<button type="button" name="button">More</button>
+	</div>
+</div>
+</body>
+</html>
